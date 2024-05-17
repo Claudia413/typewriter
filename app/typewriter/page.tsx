@@ -1,12 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [typed, setTyped] = useState("");
+  const [toType, setToType] = useState("");
 
   const handleChange = (event: any) => {
-    setTyped(typed + event?.target.value);
+    setToType(toType + event?.target.value);
   };
+
+  useEffect(() => {
+    const delay = 1000;
+    const timer = setTimeout(() => {
+      setTyped(typed + toType.charAt(0));
+      setToType(toType.substring(1));
+    }, delay);
+
+    // Cleanup function to clear the timeout if the component unmounts before the timeout completes
+    return () => clearTimeout(timer);
+  }, [toType]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
