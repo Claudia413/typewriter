@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Prata } from "next/font/google";
+import { Prata, Lato } from "next/font/google";
 import "./globals.css";
 
 const prata = Prata({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-prata",
+});
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${prata.variable}`}>
+    <html lang="en" className={`${prata.variable} ${lato.variable}`}>
       <body className="bg-gradient-corner-radial">{children}</body>
     </html>
   );
