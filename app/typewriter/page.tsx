@@ -29,14 +29,13 @@ export default function Home() {
   }, [toType]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="grid grid-cols-1 auto-rows-fr min-h-screen flex-col items-center justify-between p-8 md:p-24">
       <h1 className="font-prata">Think first</h1>
-      <p>
-        A slow typewriter for those who find themselves editing while writing
-      </p>
-      <div>{typed}</div>
+      <div className="min-w-full min-h-full shadow-xl bg-white bg-opacity-50 py-10 px-6 md:p-24"></div>
+      {typed}
       <div>
         <input
+          className="shadow-xl min-w-full bg-white bg-opacity-50 p-6 border-none outline-none"
           placeholder="start typing here"
           value={""}
           onChange={handleChange}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -52,9 +53,12 @@ export default function Home() {
             Join us in celebrating the spirit of Bukowski and discover the power
             of raw, unfiltered expression.
           </p> */}
-          <button className="w-full font-bold font-lato py-2 px-4 rounded-full my-8 shadow-button-shade-combi shadow-spacebar active:shadow-spacebar-press active:translate-x-px max-w-2xl">
+          <Link
+            href={"/typewriter"}
+            className="w-full font-bold font-lato text-center py-2 px-4 rounded-full my-8 shadow-button-shade-combi shadow-spacebar active:shadow-spacebar-press active:translate-x-px max-w-2xl"
+          >
             Start writing
-          </button>
+          </Link>
         </div>
         <div className="-mr-48">
           <img
@@ -81,7 +85,7 @@ export default function Home() {
             that hold you back.
           </p>
         </div>
-        <div className="flex flex-col-reverse w-full items-center">
+        <div className="flex flex-col-reverse md:px-11 w-full items-center">
           <h2 className="font-prata text-xl mt-4">- Charles Bukowski</h2>
           <p className="text-sm leading-relaxed">
             "An intellectual says a simple thing in a hard way. An artist says a
