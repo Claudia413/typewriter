@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen items-center px-16 md:px-48 py-24 text-brown-900">
+    <main className="flex flex-col min-h-screen items-center px-8 md:px-16 lg:px-24 xl:px-48 py-24 text-brown-900">
       <div className="flex flex-row md:gap-4">
         <div className="w-full flex flex-col justify-center font-lato">
           <h1 className="text-5xl my-4 font-prata tracking-wider max-w-2xl mb-8">
@@ -60,7 +59,7 @@ export default function Home() {
             Start writing
           </Link>
         </div>
-        <div className="-mr-48">
+        <div className="-mr-48 hidden md:block">
           <img
             src="/keyboard-small-light.png"
             className="w-4/5 translate-x-1/4 h-auto"

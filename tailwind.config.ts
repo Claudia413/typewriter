@@ -20,6 +20,7 @@ const config: Config = {
       },
       colors: {
         'brown-900': '#484743',
+        'brown-300': 'rgb(179 176 164)',
         'lilac': '#dae0ef'
       },
       boxShadow: {
@@ -28,6 +29,9 @@ const config: Config = {
         'button-shade-combi': '5px 5px 7px 1px rgba(119,119,119,0.75), inset 5px 4px 17px -3px rgba(245,239,235,0.88),  inset -7px -3px 17px -3px rgba(189,189,189,0.88);',
         'spacebar': 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset',
         'spacebar-press': 'rgba(0, 0, 0, 0.4) 0px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px 3px 6px inset',
+      },
+      gridTemplateRows: {
+        'custom': '100px 100px minmax(200px, 100%) 1fr'
       }
     },
   },
