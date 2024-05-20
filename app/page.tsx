@@ -59,7 +59,7 @@ export default function Home() {
             Start writing
           </Link>
         </div>
-        <div className="-mr-48 hidden md:block">
+        <div className="md:-mr-16 lg:-mr-24 xl:-mr-48 hidden md:block">
           <img
             src="/keyboard-small-light.png"
             className="w-4/5 translate-x-1/4 h-auto"
