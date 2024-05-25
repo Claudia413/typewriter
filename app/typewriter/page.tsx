@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "material-symbols";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
   const [minDelay, setMinDelay] = useState(0);
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [isDelayChecked, setIsDelayChecked] = useState(false);
+  const userTyped = useRef(null);
 
   const handleChange = (event: any) => {
     setToType(toType + event?.target.value);
@@ -45,6 +46,12 @@ export default function Home() {
     // Cleanup function to clear the timeout if the component unmounts before the timeout completes
     return () => clearTimeout(timer);
   }, [toType]);
+
+  useEffect(() => {
+    if (userTyped.current) {
+      userTyped.current.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+  }, [typed]);
 
   const toggleSettings = () => {
     setSettingsOpen(!settingsOpen);
@@ -88,8 +95,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:p-24 overflow-x-hidden overflow-y-auto whitespace-pre-wrap text-pretty break-words">
-        {typed}
+      <div className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:pb-0 md:p-24 overflow-x-hidden overflow-y-auto whitespace-pre-wrap text-pretty break-words">
+        <p ref={userTyped} className="pb-6 md:pb-24">
+          {typed}
+        </p>
       </div>
       <div className="mt-16">
         <input
