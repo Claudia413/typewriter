@@ -63,7 +63,7 @@ export default function Home() {
           <img
             src="/keyboard-small-light.png"
             className="w-4/5 translate-x-1/4 h-auto"
-            alt="close up of a keyboard, only the left half is visible"
+            alt="cut-out close up of a keyboard, only the left half is visible"
           />
         </div>
       </div>

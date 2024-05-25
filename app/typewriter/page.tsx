@@ -15,6 +15,12 @@ export default function Home() {
     setToType(toType + event?.target.value);
   };
 
+  const handleKeyUp = (event: any) => {
+    if (event.key === "Enter") {
+      setToType(toType + "\n");
+    }
+  };
+
   useEffect(() => {
     if (isDelayChecked) {
       setMinDelay(1100);
@@ -82,7 +88,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:p-24 overflow-x-hidden overflow-y-auto">
+      <div className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:p-24 overflow-x-hidden overflow-y-auto whitespace-pre-wrap">
         {typed}
       </div>
       <div className="mt-16">
@@ -91,6 +97,7 @@ export default function Home() {
           placeholder="start typing here"
           value={""}
           onChange={handleChange}
+          onKeyUp={handleKeyUp}
         ></input>
       </div>
     </main>
