@@ -88,7 +88,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:p-24 overflow-x-hidden overflow-y-auto whitespace-pre-wrap">
+      <div className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:p-24 overflow-x-hidden overflow-y-auto whitespace-pre-wrap text-pretty break-words">
         {typed}
       </div>
       <div className="mt-16">
