@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen items-center px-8 md:px-16 lg:px-24 xl:px-48 py-24 text-brown-900">
-      <div className="flex flex-row md:gap-4">
+    <main className="flex flex-col min-h-screen items-center px-8 md:px-16 md:pb-12 lg:px-24 xl:px-48 py-24 text-brown-900">
+      <div className="flex flex-row gap-0 lg:gap-4">
         <div className="w-full flex flex-col justify-center font-lato">
           <h1 className="text-5xl my-4 font-prata tracking-wider max-w-2xl mb-8">
             Think first
           </h1>
           <h2 className="font-prata text-3xl mb-8">
-            <span className="border-b border-solid border-current w-72 inline-block relative bottom-3"></span>{" "}
+            <span className="border-b border-solid border-current w-1/3 xl:w-72 inline-block relative bottom-3"></span>{" "}
             Write second
           </h2>
           <p className="mb-4 max-w-2xl">
