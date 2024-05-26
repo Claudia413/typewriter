@@ -115,7 +115,7 @@ export default function Home() {
               Typing delay{" "}
               <sup title="Slow the display speed: faster typing shows slower">
                 <span
-                  className="material-symbols-outlined"
+                  className="material-symbols-outlined text-green-900"
                   style={{ fontSize: "0.875rem" }}
                 >
                   help
