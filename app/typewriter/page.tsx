@@ -8,9 +8,10 @@ export default function Home() {
   const [toType, setToType] = useState("");
   const [delay, setDelay] = useState(100);
   const [minDelay, setMinDelay] = useState(0);
-  const [settingsOpen, setSettingsOpen] = useState(true);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [isDelayChecked, setIsDelayChecked] = useState(false);
   const userTyped = useRef<HTMLDivElement | null>(null);
+  const inputField = useRef<HTMLInputElement | null>(null);
 
   const handleChange = (event: any) => {
     setToType(toType + event?.target.value);
@@ -19,6 +20,12 @@ export default function Home() {
   const handleKeyUp = (event: any) => {
     if (event.key === "Enter") {
       setToType(toType + "\n");
+    }
+  };
+
+  const focusTyping = () => {
+    if (inputField.current) {
+      inputField.current.focus();
     }
   };
 
@@ -95,7 +102,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:pb-0 md:p-24 overflow-x-hidden overflow-y-auto whitespace-pre-wrap text-pretty break-words">
+      <div
+        onClick={focusTyping}
+        className="min-w-full min-h-full max-h-[100%] shadow-xl bg-white row-span-4 bg-opacity-50 py-10 px-6 md:pb-0 md:p-24 overflow-x-hidden overflow-y-auto whitespace-pre-wrap text-pretty break-words"
+      >
         <p ref={userTyped} className="pb-6 md:pb-24">
           {typed}
         </p>
@@ -107,6 +117,8 @@ export default function Home() {
           value={""}
           onChange={handleChange}
           onKeyUp={handleKeyUp}
+          autoFocus
+          ref={inputField}
         ></input>
       </div>
     </main>
