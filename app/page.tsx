@@ -86,15 +86,15 @@ export default function Home() {
         </div>
         <div className="flex flex-col-reverse md:px-11 w-full items-center">
           <h2 className="font-prata text-xl mt-4">- Charles Bukowski</h2>
-          <p className="text-sm leading-relaxed">
-            "An intellectual says a simple thing in a hard way. An artist says a
-            hard thing in a simple way."
-          </p>
+          <q className="text-sm leading-relaxed">
+            An intellectual says a simple thing in a hard way. An artist says a
+            hard thing in a simple way.
+          </q>
           <p className="text-sm leading-relaxed">And</p>
-          <p className="text-sm leading-relaxed">
-            "Some people never go crazy. What truly horrible lives they must
-            lead."
-          </p>
+          <q className="text-sm leading-relaxed">
+            Some people never go crazy. What truly horrible lives they must
+            lead.
+          </q>
         </div>
         <div className="flex flex-col w-full items-center">
           <h2 className="font-prata text-xl mb-4">Reset</h2>
