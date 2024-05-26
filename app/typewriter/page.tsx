@@ -10,6 +10,7 @@ export default function Home() {
   const [minDelay, setMinDelay] = useState(0);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [isDelayChecked, setIsDelayChecked] = useState(false);
+  const [copied, setCopied] = useState(false);
   const userTyped = useRef<HTMLDivElement | null>(null);
   const inputField = useRef<HTMLInputElement | null>(null);
 
@@ -31,7 +32,16 @@ export default function Home() {
 
   const copyText = () => {
     navigator.clipboard.writeText(typed);
+    setCopied(true);
   };
+
+  useEffect(() => {
+    const copiedTimer = setTimeout(() => {
+      setCopied(false);
+    }, 800);
+
+    return () => clearTimeout(copiedTimer);
+  }, [copied]);
 
   useEffect(() => {
     if (isDelayChecked) {
@@ -99,9 +109,18 @@ export default function Home() {
               type="checkbox"
               checked={isDelayChecked}
               onChange={handleNoDelayChange}
+              title="Slow the display speed: faster typing shows slower"
             />
             <label id="delay-label" className="ml-1.5">
-              Typing delay
+              Typing delay{" "}
+              <sup title="Slow the display speed: faster typing shows slower">
+                <span
+                  className="material-symbols-outlined"
+                  style={{ fontSize: "0.875rem" }}
+                >
+                  help
+                </span>
+              </sup>
             </label>
           </div>
         </div>
@@ -125,11 +144,21 @@ export default function Home() {
           ref={inputField}
         ></input>
         <div
-          className="shadow-xl bg-white bg-opacity-50 p-6 border-none outline-none cursor-pointer"
+          className={`shadow-xl bg-white bg-opacity-50 p-6 border-none outline-none cursor-pointer transition-all ease-in-out duration-500 ${
+            copied ? "bg-green-900" : ""
+          }`}
           title="copy your writings"
           onClick={copyText}
         >
-          <span className="material-symbols-outlined">content_copy</span>
+          <span
+            className="material-symbols-outlined"
+            style={{
+              color: copied ? "white" : "#a59c93",
+              transition: "color 0.5s ease-in-out",
+            }}
+          >
+            content_copy
+          </span>
         </div>
       </div>
     </main>

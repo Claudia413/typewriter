@@ -21,7 +21,8 @@ const config: Config = {
       colors: {
         'brown-900': '#484743',
         'brown-300': 'rgb(179 176 164)',
-        'lilac': '#dae0ef'
+        'lilac': '#dae0ef',
+        'green-900': '#56776b'
       },
       boxShadow: {
         'right-bottom-shade': '5px 5px 7px 1px rgba(0,0,0,0.75)',
