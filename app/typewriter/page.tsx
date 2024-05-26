@@ -29,6 +29,10 @@ export default function Home() {
     }
   };
 
+  const copyText = () => {
+    navigator.clipboard.writeText(typed);
+  };
+
   useEffect(() => {
     if (isDelayChecked) {
       setMinDelay(1100);
@@ -110,9 +114,9 @@ export default function Home() {
           {typed}
         </p>
       </div>
-      <div className="mt-16">
+      <div className="mt-16 flex">
         <input
-          className="shadow-xl min-w-full bg-white bg-opacity-50 row-span-2 p-6 border-none outline-none"
+          className="flex flex-grow shadow-xl bg-white bg-opacity-50 p-6 border-none outline-none"
           placeholder="start typing here"
           value={""}
           onChange={handleChange}
@@ -120,6 +124,13 @@ export default function Home() {
           autoFocus
           ref={inputField}
         ></input>
+        <div
+          className="shadow-xl bg-white bg-opacity-50 p-6 border-none outline-none cursor-pointer"
+          title="copy your writings"
+          onClick={copyText}
+        >
+          <span className="material-symbols-outlined">content_copy</span>
+        </div>
       </div>
     </main>
   );
