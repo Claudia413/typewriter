@@ -54,7 +54,7 @@ export default function Home() {
           </p> */}
           <Link
             href={"/typewriter"}
-            className="w-full font-bold font-lato text-center py-2 px-4 rounded-full my-8 shadow-button-shade-combi shadow-spacebar active:shadow-spacebar-press active:translate-x-px max-w-2xl"
+            className="w-full font-bold font-lato text-center py-2 px-4 rounded-3 my-8 shadow-button-shade-combi shadow-spacebar active:shadow-spacebar-press active:translate-x-px max-w-2xl"
           >
             Start writing
           </Link>
@@ -109,7 +109,10 @@ export default function Home() {
           <p className="text-sm leading-relaxed">
             This is a project made for fun, but if it is helping you, or it
             could help you better with a tweak. I'm happy to hear from you! You
-            can reach me at{" "}
+            can reach me by email or on{" "}
+            <Link href={"https://www.linkedin.com/in/claudia-engelsman/"}>
+              LinkedIn{" "}
+            </Link>
           </p>
         </div>
       </div>

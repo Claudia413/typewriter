@@ -41,7 +41,7 @@ input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
   border: 1px solid currentColor;
-  border-radius: 3px;
+  border-radius: 2px;
   transform: translateY(-0.075em);
   display: grid;
   place-content: center;
