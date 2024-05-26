@@ -14,16 +14,16 @@ export default function Home() {
           </h2>
           <p className="mb-4 max-w-2xl">
             Charles Bukowski, the celebrated poet and author belief in
-            spontaneity and authenticity led him to famously advise, "Don't
-            try," underscoring the importance of writing without overthinking or
-            over-editing.
+            spontaneity and authenticity led him to famously advise,{" "}
+            <q>Don&#39;t try,</q> underscoring the importance of writing without
+            overthinking or over-editing.
           </p>
           <p className="mb-4 max-w-2xl">
-            Here we embrace Bukowski's philosophy by encouraging writers to
+            Here we embrace Bukowski&#39;s philosophy by encouraging writers to
             express their thoughts without the crutch of editing. Here, you
-            can't delete what you've written, urging you to think carefully
-            before you type. This approach fosters introspective writing,
-            helping you capture the true essence of your thoughts.
+            can&#39;t delete what you&#39;ve written, urging you to think
+            carefully before you type. This approach fosters introspective
+            writing, helping you capture the true essence of your thoughts.
           </p>
           {/* <p>
             Charles Bukowski, a renowned poet and author, was celebrated for his
@@ -108,8 +108,8 @@ export default function Home() {
           <h2 className="font-prata text-xl mb-4">Say hi!</h2>
           <p className="text-sm leading-relaxed">
             This is a project made for fun, but if it is helping you, or it
-            could help you better with a tweak. I'm happy to hear from you! You
-            can reach me by email or on{" "}
+            could help you better with a tweak. I&#39;m happy to hear from you!
+            You can reach me by email or on{" "}
             <Link href={"https://www.linkedin.com/in/claudia-engelsman/"}>
               LinkedIn{" "}
             </Link>
