@@ -115,7 +115,7 @@ export default function Home() {
               Typing delay{" "}
               <sup title="Slow the display speed: faster typing shows slower">
                 <span
-                  className="material-symbols-outlined text-green-900"
+                  className="material-symbols-outlined"
                   style={{ fontSize: "0.875rem" }}
                 >
                   help
@@ -144,8 +144,8 @@ export default function Home() {
           ref={inputField}
         ></input>
         <div
-          className={`shadow-xl bg-white bg-opacity-50 p-6 border-none outline-none cursor-pointer transition-all ease-in-out duration-500 ${
-            copied ? "bg-green-900" : ""
+          className={`shadow-xl bg-opacity-50 p-6 border-none outline-none cursor-pointer transition-all ease-in-out duration-500 ${
+            copied ? "bg-green-900" : "bg-white"
           }`}
           title="copy your writings"
           onClick={copyText}
