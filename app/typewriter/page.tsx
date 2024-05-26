@@ -10,7 +10,7 @@ export default function Home() {
   const [minDelay, setMinDelay] = useState(0);
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [isDelayChecked, setIsDelayChecked] = useState(false);
-  const userTyped = useRef(null);
+  const userTyped = useRef<HTMLDivElement | null>(null);
 
   const handleChange = (event: any) => {
     setToType(toType + event?.target.value);
