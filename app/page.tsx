@@ -109,7 +109,13 @@ export default function Home() {
           <p className="text-sm leading-relaxed">
             This is a project made for fun, but if it is helping you, or it
             could help you better with a tweak. I&#39;m happy to hear from you!
-            You can reach me by email or on{" "}
+            You can reach me by{" "}
+            <Link
+              href={"mailto:cmjengelsman@gmail.com?subject=Think first is..."}
+            >
+              email{" "}
+            </Link>
+            or on{" "}
             <Link href={"https://www.linkedin.com/in/claudia-engelsman/"}>
               LinkedIn{" "}
             </Link>
