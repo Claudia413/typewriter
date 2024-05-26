@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Prata, Lato } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const prata = Prata({
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${prata.variable} ${lato.variable}`}>
       <body className="bg-gradient-corner-radial">{children}</body>
+      <GoogleAnalytics gaId="G-LSTJZQ1MZ3" />
     </html>
   );
 }
